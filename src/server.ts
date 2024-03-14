@@ -16,3 +16,5 @@ const start = async () => {
 };
 
 start();
+
+//npm run dev
