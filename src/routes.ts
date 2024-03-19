@@ -5,6 +5,8 @@ import {
   FastifyReply,
 } from "fastify";
 import { CreateCustomerController } from "./controllers/createCustomerControllers";
+import { ListCustomerController } from "./controllers/listCustomerController";
+import { DeleteCustomerController } from "./controllers/deleteCustomerController"
 
 export async function routes(
   fastify: FastifyInstance,
@@ -23,6 +25,16 @@ export async function routes(
       return new CreateCustomerController().handle(request, reply);
     }
   );
+
+  fastify.get(
+    "/customes",
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      return new ListCustomerController().handle(request, reply);
+    }
+  );
+  fastify.delete("/customer", async (request: FastifyRequest, reply: FastifyReply) => {
+    return new DeleteCustomerController().handle(request, reply);
+  }
 }
 
 //login do banco de dados williamcostacardoso94
