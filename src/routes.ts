@@ -35,7 +35,6 @@ export async function routes(
   fastify.delete("/customer", async (request: FastifyRequest, reply: FastifyReply) => {
     return new DeleteCustomerController().handle(request, reply);
   }
-}
 
 //login do banco de dados williamcostacardoso94
 //senha do banco de dados 12345678will
