@@ -1,1 +1,1 @@
-[ Projeto de Estudo ]
+[STUDY PROJECT]
